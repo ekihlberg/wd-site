@@ -9,12 +9,19 @@ body {
 
 
 }
-
+.top_wrapper{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .top-header-text{
   text-align: center;
   font-family: 'Gentium Plus', serif;
   font-weight: 400;
   font-size: 48PX;
+  margin: 0;
 
   .exet{ 
     font-size: 148PX;
