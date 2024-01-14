@@ -1,5 +1,24 @@
 body {
   background-color: #E3E4E1;
+  margin: 0px;
+}
+
+h1, h2 {
+  font-family: 'Gentium Plus', serif;
+}
+h3, h4, p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+}
+
+@keyframes animateTopText {
+  0%   {
+    opacity: 0; 
+    transform: translateY(10vh)  }
+  100% {
+    opacity: 1;
+    transform: translateY(0)  
+  }
 }
 
 .top-header-subtext{
@@ -20,6 +39,7 @@ body {
   text-align: center;
   font-family: 'Gentium Plus', serif;
   font-weight: 400;
+  animation: animateTopText 2s ease-in 0s 1  ;
   font-size: 48PX;
   margin: 0;
 
@@ -30,6 +50,38 @@ body {
   }
 
 }
+
+.section{
+  min-height: 90vh;
+ 
+  &_info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+    width:80%;
+    max-width: 700px;
+    font-size: 17px;
+    line-height: 1.9;
+    font-weight: 100;
+
+    }
+    
+    &__dark{
+      background-color: #2B3835;
+      color: #fff;
+    }
+    
+    }
+    &_text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  
+}
+
 .wedding-rsvp-form {
   display: flex;
   font-family: 'Raleway', sans-serif;
