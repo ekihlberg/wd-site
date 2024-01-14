@@ -19,11 +19,16 @@ function Xosa() {
            
         <label>
             För- och efternamn
-          <input type="text" placeholder="ex. Tobias Eherendahl" />
+          <input type="text" name='Name2' placeholder="ex. Tobias Eherendahl" />
+        </label>
+        <label>
+            E-postadress
+          <input type="email" name='email2' placeholder="ex. exempel@gmail.com" />
+          
         </label>
 
-        
-        <ToggleInput></ToggleInput>
+            <ToggleInput></ToggleInput>
+
           <a href="#osa" id='osa' className='xosa_rem' onClick={handleToggleClick}>X</a>
           
         </div>
