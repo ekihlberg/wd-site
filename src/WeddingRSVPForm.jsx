@@ -36,9 +36,13 @@ function WeddingRSVPForm() {
     };
 
     // Make the POST request to your Google Apps Script
-    fetch("https://script.google.com/macros/s/AKfycbwRSIY5QeFL9VpzVCqhh7zkay6OgKx6ufgk6C9rwtWD2EIQqPboKfb-fe5YyRc85ShyJw/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbwMC12l9YJZdeqOIrzaCgjnC-_SVDCzde2WFzgyFV7ZAe23Xd8OfRxDGvAw4P2Q5748mQ/exec", {
     method: "POST",
-    body: new URLSearchParams(formData), // Encode the form data
+    
+    headers: {
+        'Content-Type': 'text/plain'
+      },
+      body: JSON.stringify(formData)
   })
     .then((res) => res.json())
     .then((data) => {
