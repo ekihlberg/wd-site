@@ -1,243 +1,392 @@
+$primary-color: #2B3835;
+$background-color: #E3E4E1;
+$text-color: #fff;
+$secondary-color: #9BA19E;
+$baskervville-font: 'Baskervville', serif;
+$raleway-font: 'Raleway', sans-serif;
+
 body {
-  background-color: #E3E4E1;
-  margin: 0px;
+  background-color: $background-color;
+  margin: 0;
 }
 
 h1, h2 {
-  font-family: 'Baskervville', serif;
+  font-family: $baskervville-font;
+  text-align: center;
 }
+
 h3, h4, p {
-  font-family: 'Raleway', sans-serif;
+  font-family: $raleway-font;
   font-weight: 200;
 }
 
-@keyframes animateTopText {
-  0%   {
-    opacity: 0; 
-    transform: translateY(10vh)  }
-  100% {
-    opacity: 1;
-    transform: translateY(0)  
-  }
-}
-
-.top-header-subtext{
+.top-header-subtext {
   text-align: center;
-  font-family: 'Raleway', sans-serif;
-  font-size: 12PX;
-
-
+  font-family: $raleway-font;
+  font-size: 12px;
 }
-.top_wrapper{
+
+.top_wrapper {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.top-header-text{
+
+.top-header-text {
   text-align: center;
-  font-family: 'Baskervville', serif;
+  font-family: $baskervville-font;
   font-weight: 400;
-  animation: animateTopText 2s ease-in 0s 1  ;
-  font-size: 48PX;
+  animation: animateTopText 2s ease-in 0s 1;
+  font-size: 48px;
   margin: 0;
 
-  .exet{ 
-    font-size: 148PX;
+  .exet {
+    font-size: 148px;
     position: relative;
-
   }
-
 }
 
-.section{
+.section {
   min-height: 90vh;
- 
-  &_info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &_info {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    p{
-    width:80%;
-    max-width: 700px;
-    font-size: 17px;
-    line-height: 1.9;
-    font-weight: 100;
+    p {
+      width: 80%;
+      max-width: 700px;
+      font-size: 17px;
+      line-height: 1.9;
+      font-weight: 100;
+    }
 
+    &__dark {
+      background-color: $primary-color;
+      color: $text-color;
     }
-    
-    &__dark{
-      background-color: #2B3835;
-      color: #fff;
-    }
-    
-    }
-    &_text {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
   }
-  
+
+  &_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .wedding-rsvp-form {
   display: flex;
-  font-family: 'Raleway', sans-serif;
+  font-family: $raleway-font;
   flex-direction: column;
   max-width: 350px;
   margin: 0 auto;
   padding: 20px;
-  
-  .osa_toggle{
+
+  .osa_toggle {
     display: flex;
     width: 100%;
-    label{
+
+    label {
       padding: 11px 20px 27px 8px;
       width: 50%;
-      background-color: #fff;
+      background-color: $text-color;
       position: relative;
       font-size: 0.8rem;
-      display:inline-block;
+      display: inline-block;
+
       &:hover {
-        background-color: #9BA19E;
+        background-color: $secondary-color;
+      }
     }
+
+    input {
+      position: absolute;
+      display: none;
+      top: -5px;
+      right: -5px;
     }
 
-      input {
-        position: absolute;
-        display: none;
-        top: -5px;
-        right: -5px;
-      }
-      input[type="radio"] {
-        display: none;
-      }
-      input[type=radio]:checked + label { 
-        background-image: none;
-         background-color:#d0d0d0;
-         border: 1px solid #000;
+    input[type="radio"] {
+      display: none;
+    }
 
-         &:hover {
-          background-color: #9BA19E;
+    input[type=radio]:checked + label {
+      background-image: none;
+      background-color: #d0d0d0;
+      border: 1px solid #000;
+
+      &:hover {
+        background-color: $secondary-color;
       }
-     }
+    }
 
-   
-
-    
     label:nth-of-type(1) {
       margin-right: 20px;
-   }
-
-
+    }
   }
 
   label {
-      margin-bottom: 15px;
-      font-family: 'Raleway', sans-serif;
-      font-size: 1rem;
+    margin-bottom: 15px;
+    font-family: $raleway-font;
+    font-size: 1rem;
 
-      input[type="text"], input[type="email"] {
-          width: calc(100% - 30px);
-          padding: 15px;
-          margin-top: 5px;
-          border: 0px solid #ccc;
-          border-radius: 0px;
-      }
-
-  
+    input[type="text"], input[type="email"] {
+      width: calc(100% - 30px);
+      padding: 15px;
+      margin-top: 5px;
+      border: 0 solid #ccc;
+      border-radius: 0;
+    }
   }
 
   button[type="submit"] {
-      padding: 15px 20px;
-      background-color: #2B3835;;
-      color: white;
-      border: none;
-      border-radius: 49px;
-      width: 200px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+    padding: 15px 20px;
+    background-color: $primary-color;
+    color: $text-color;
+    border: none;
+    border-radius: 49px;
+    width: 200px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 
-      &:hover {
-          background-color: #9BA19E;
-      }
-
+    &:hover {
+      background-color: $secondary-color;
+    }
   }
 }
 
-.food_field{
-  padding: 20px 12PX;
+.food_field {
+  padding: 20px 12px;
   display: block;
-  margin: 20PX -12px;
-  background-color: #2B3835;
-  color: #fff;
+  margin: 20px -12px;
+  background-color: $primary-color;
+  color: $text-color;
   border-radius: 5px;
 }
 
-.xosa_add{
+.xosa_add {
   display: block;
-  margin: 20PX 0px;
+  margin: 20px 0;
   text-align: center;
   border-radius: 5px;
-  color: #2B3835;
+  color: $primary-color;
   text-decoration: none;
 }
-.xosa_rem{
+
+.xosa_rem {
   position: absolute;
-  color: #fff;
+  color: $text-color;
   text-decoration: none;
-  background-color: #2B3835;
+  background-color: $primary-color;
   padding: 10px 14px;
   box-shadow: 1px 1px 60px 1px #000;
   border-radius: 20px;
-  right:  -15px;
+  right: -15px;
   top: -15px;
 }
 
-
-.xosa_box{
-  padding: 10px 12PX;
+.xosa_box {
+  padding: 10px 12px;
   display: block;
   position: relative;
-  margin: 20PX -12px;
-  background-color: #2B3835;
-  color: #fff;
+  margin: 20px -12px;
+  background-color: $primary-color;
+  color: $text-color;
   border-radius: 5px;
-  label{
+
+  label {
     margin: 10px 0;
     display: block;
   }
 }
 
-.button_wrapper{
+.button_wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.rsvp_section{
+
+.rsvp_section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 0px;
+  padding: 20px 0;
 
-  H3{
+  h3 {
     font-size: 15px;
     font-weight: 400;
-    color: #2B3835;
-    margin-bottom: 0px;
+    color: $primary-color;
+    margin-bottom: 0;
   }
-  h2{
+
+  h2 {
     font-size: 29px;
     margin: 5px 0;
-    color: #2B3835;
+    color: $primary-color;
   }
-  p{
+
+  p {
     font-size: 16px;
     max-width: 250px;
     text-align: center;
+  }
+}
+
+.funfacts_wrapper {
+  border: 2px solid $primary-color;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  height: 80vh;
+  max-width: 1050px;
+
+  .funfacts {
+    width: calc(50% - 40px);
+    background: $text-color;
+    padding: 10px;
+    min-width: 60px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 768px;
+
+  * {
+    box-sizing: border-box;
+
+    &::before, &::after {
+      box-sizing: border-box;
+    }
+  }
+}
+
+.accordion {
+  .accordion-item {
+    border-bottom: 1px solid $primary-color;
+
+    button[aria-expanded='true'] {
+      border-bottom: 1px solid $primary-color;
+    }
+  }
+
+  button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: $text-color;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+    padding-right: 22px;
+
+    &:hover, &:focus {
+      cursor: pointer;
+      color: $primary-color;
+
+      &::after {
+        cursor: pointer;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+      }
+    }
+
+    .accordion-title {
+      padding: 1em 1.5em 1em 0;
+    }
+
+    .icon {
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 22px;
+      height: 22px;
+      border: 1px solid;
+      border-radius: 22px;
+
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 9px;
+        left: 5px;
+        width: 10px;
+        height: 2px;
+        background: currentColor;
+      }
+
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 5px;
+        left: 9px;
+        width: 2px;
+        height: 10px;
+        background: currentColor;
+      }
+    }
+  }
+
+  button[aria-expanded='true'] {
+    color: $primary-color;
+
+    .icon {
+      &::after {
+        width: 0;
+      }
+    }
+
+    + .accordion-content {
+      opacity: 1;
+      max-height: 9em;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
+    }
+  }
+
+  .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 2em 0;
+    }
+  }
+}
+
+@keyframes animateTopText {
+  0% {
+    opacity: 0;
+    transform: translateY(10vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

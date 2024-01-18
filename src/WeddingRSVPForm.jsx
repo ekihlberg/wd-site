@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import ToggleInput from './ToggleInput.jsx'; 
 import Xosa from './Xosa.jsx'; 
 
@@ -35,24 +36,16 @@ function WeddingRSVPForm() {
       Specialkost2: specialDiet,
     };
 
-    // Make the POST request to your Google Apps Script
-    fetch("https://script.google.com/macros/s/AKfycbwMC12l9YJZdeqOIrzaCgjnC-_SVDCzde2WFzgyFV7ZAe23Xd8OfRxDGvAw4P2Q5748mQ/exec", {
-    method: "POST",
-    
-    headers: {
-        'Content-Type': 'text/plain'
-      },
-      body: JSON.stringify(formData)
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
+    axios.post("https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbzyw43mcpHdFaWgwiu1i94jTQ3N4Pu_OEUPxaeEIGkr_yR0MMX4EbAEnljef4VfeWo8TQ/exec", formData)
+    .then(response => {
+      console.log(response.data);
       alert('Form submitted. Thank you!');
     })
-    .catch((error) => {
+    .catch(error => {
       console.error(error);
-      alert('An error occurred while submitting the form. Please try again later.'); // Display an error message to the user
+      alert('An error occurred while submitting the form. Please try again later.');
     });
+  
   };
 
   
