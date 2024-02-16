@@ -44,28 +44,8 @@ function Faq() {
     };
 
     return (
-        <><div className='section section_info section_info__dark'>
-           <svg xmlns="http://www.w3.org/2000/svg" className="top_wave" viewBox="0 0 1440 320"><path fill="#2B3835" fill-opacity="1" d="M0,224L48,224C96,224,192,224,288,213.3C384,203,480,181,576,176C672,171,768,181,864,208C960,235,1056,277,1152,272C1248,267,1344,213,1392,186.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-            <div className='section_text'>
-                <h3>Vigsel</h3>
-                <h2>Ingen Kyrka för oss</h2>
-                <p>Vi kommer att gifta oss i Fabrikstråket i Jonsered den 21 september. Det blir en kortare borglig cermoni med vänner och familj.  Vi kommer senare att fortsätta dagen i samma lokal med tårta, middag och festligheter förhoppningsvis in på småtimmarna.  Oavsett om ni bor nära eller har åkt lång hoppas vi att ni kommer få en fantastisk kväll med mycket skartt, dans och glädjetårar. </p>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" className='bottom_wave' viewBox="0 0 1440 320"><path fill="#2B3835" fill-opacity="1" d="M0,32L48,69.3C96,107,192,181,288,181.3C384,181,480,107,576,85.3C672,64,768,96,864,90.7C960,85,1056,43,1152,48C1248,53,1344,107,1392,133.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-            
-        </div>
-            <div className="conainer">
-                <div className="section">
-                    <div className="section_text">
-                        <h3>Vägbeskrivning</h3>
-                        <h2>Hitta hit</h2>
-                        <p>Lokalen ligger snett mitt emot brödfabriken i josered och det finns olika sätt att ta sig dit antingen med bil/taxi/uber  eller med pendeltåg.
-                            <br />
-                            Klicka på knappen för att komma vidare till karta</p>
-                            <a className="button" href="https://www.google.com/maps/dir/57.7350699,12.0557066/Fabriksstr%C3%A5ket+Jonsered,+Fabriksstr%C3%A5ket+36,+433+76+Jonsered/@57.7470384,12.0329031,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x464ff78d3f6897c3:0xaffee2e763751daa!2m2!1d12.1756818!2d57.7480542?entry=ttu" target='_blank'>Vägbeskrivning</a>
-                    </div>
-                </div>
-            </div>
+        <>
+           
         <div className="container">
                 <h2>Frequently Asked Questions</h2>
                 <div className="accordion">

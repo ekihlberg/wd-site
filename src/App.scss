@@ -38,11 +38,13 @@ body, .root {
 h1, h2 {
   font-family: $baskervville-font;
   text-align: center;
+  font-size: 1.8em;
 }
 
 h3, h4, p, a{
   font-family: $raleway-font;
   font-weight: 200;
+  margin-bottom: 0;
 }
 a.button {
   padding: 15px 20px;
@@ -176,7 +178,13 @@ a.button {
     flex-direction: column;
   }
 }
-
+.direction_text{
+  max-width: 560px;
+  width: 90%;
+  p{
+    padding-bottom: 2rem;
+  }
+}
 .wedding-rsvp-form {
   display: flex;
   font-family: $raleway-font;
@@ -390,6 +398,7 @@ a.button {
 
     .accordion-title {
       padding: 1em 1.5em 1em 0;
+      color: #000;
     }
 
     .icon {
