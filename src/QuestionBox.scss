@@ -1,0 +1,71 @@
+// QuestionBox.scss
+.questions-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+    transform: translateY(-18vh);
+}
+.question-box {
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 46%;
+    margin: 10px;
+    max-width: 150px;
+    background-color: #C5C8C0;
+    min-height: 150px;
+    border-radius: 5px;
+  
+    .answer {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease, max-height 0.3s ease;
+    }
+    &:hover .question {
+        opacity: 0;
+        display: none;
+        max-height: 200px; // Adjust based on your content
+      }
+  
+    &:hover .answer {
+      opacity: 1;
+      max-height: 200px; // Adjust based on your content
+    }
+  }
+  
+  
+.funfacts_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+  .funfacts_container{
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 768px;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    margin-top: 50vh;
+    height: 50vh;
+    margin-bottom: 10vh;
+
+    .section_text{
+        width:80%;
+        transform: translateY(-25vh);
+    }
+
+    svg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100.3%;
+        transform: translateY(-99%);
+        height: auto;
+    }
+  }
