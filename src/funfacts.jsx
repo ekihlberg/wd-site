@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import QuestionBox from './QuestionBox';
+import QuestionBox from './QuestionBox.jsx';
 
 const questionsAndAnswers = [
     { question: "Hur träffades vi?", answer: "2018 matchade vi på Datingappen Vissla, efter att den strulat ett antal gånger frågade Emma äntligen ut Tobbe i Juli 2019 " },

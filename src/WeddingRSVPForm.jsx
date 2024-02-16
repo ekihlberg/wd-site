@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import ToggleInput from './ToggleInput.jsx'; 
-import Xosa from './Xosa.jsx'; 
+import ToggleInput from './ToggleInput.jsx';
+import Xosa from './Xosa.jsx';
 
 function WeddingRSVPForm() {
   const [fullName, setFullName] = useState('');
   const [attendance, setAttendance] = useState('');
-  const [specialDiet, setSpecialDiet] = useState('');
-  const [additionalGuests, setAdditionalGuests] = useState('');
-  const [guestName, setGuestName] = useState('');
-  const [guestEmail, setGuestEmail] = useState('');
   const [isToggled, setIsToggled] = useState(false);
   const [extraInputValue, setExtraInputValue] = useState('');
+  const [email, setEmail] = useState(''); // Added state for email
   const [showFields, setShowFields] = useState(false);
 
   const handleToggleClick = () => {
@@ -22,40 +18,16 @@ function WeddingRSVPForm() {
     setIsToggled(!isToggled);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    // Prepare the data for submission
-    const formData = {
-      Name: fullName,
-      Email: '', // Add the primary attendee's email here if available
-      answer: attendance,
-      Specialkost: specialDiet,
-      Name2: guestName, // Include the additional guest's name
-      Email2: guestEmail, // Include the additional guest's email
-      Specialkost2: specialDiet,
-    };
-
-    axios.post("https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbzyw43mcpHdFaWgwiu1i94jTQ3N4Pu_OEUPxaeEIGkr_yR0MMX4EbAEnljef4VfeWo8TQ/exec", formData)
-    .then(response => {
-      console.log(response.data);
-      alert('Form submitted. Thank you!');
-    })
-    .catch(error => {
-      console.error(error);
-      alert('An error occurred while submitting the form. Please try again later.');
-    });
-  
-  };
-
-  
+  // No need for handleSubmit function
 
   return (
     <div className='rsvp_section'>
       <h3>OSA</h3>
       <h2>Kommer du?</h2>
       <p>Oavsett om ni kommer eller inte vill vi grärna att ni fyller i formuläret nedan.</p>
-      <form onSubmit={handleSubmit} className="wedding-rsvp-form">
+      <form className="wedding-rsvp-form" name="weddingRSVP" method="POST" data-netlify="true" netlify>
+        {/* Netlify requires a hidden input for form-name to correctly process submissions from React/JS */}
+        <input type="hidden" name="form-name" value="weddingRSVP" />
         <label>
           För- och efternamn:
           <input
@@ -117,7 +89,13 @@ function WeddingRSVPForm() {
 
         <label>
           E-postadress
-          <input type="email" name='email2' placeholder="ex. exempel@gmail.com" />
+          <input
+            type="email"
+            name='email'
+            value={email} // Use state for value
+            onChange={(e) => setEmail(e.target.value)} // Update state on change
+            placeholder="ex. exempel@gmail.com"
+          />
         </label>
 
         <Xosa handleToggleClick={handleToggleClick} showFields={showFields} />

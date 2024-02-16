@@ -1,6 +1,6 @@
-// QuestionBox.jsx
+
 import React from 'react';
-import './QuestionBox.scss'; // Make sure to create this SCSS file for styling
+import './QuestionBox.scss'; 
 
 const QuestionBox = ({ question, answer }) => {
   return (
