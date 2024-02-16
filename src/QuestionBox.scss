@@ -1,4 +1,9 @@
 // QuestionBox.scss
+$raleway-font: 'Raleway', sans-serif;
+
+h3, h4, p, a, div{
+  font-family: $raleway-font;
+}
 .questions-container{
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +22,10 @@
     background-color: #C5C8C0;
     min-height: 150px;
     border-radius: 5px;
+   &:hover{
+    background-color: #2B3835;
+    color: #FFF;
+   }
   
     .answer {
       max-height: 0;
@@ -68,4 +77,41 @@
         transform: translateY(-99%);
         height: auto;
     }
+  }
+
+  @media screen and (max-width: 790px) {
+    .funfacts_container {
+      width: 90vw;
+      height: auto;
+  }
+  .questions-container {
+  
+    transform: translateY(- 10vh);
+  }
+  }
+
+  @media screen and (max-width: 470px) {
+    .funfacts_container {
+      width: 90vw;
+      height: auto;
+      margin-top: 3vh;
+
+      .section_text {
+        transform: translateY(-15vh);
+    }
+
+.question-box {
+    width: 31%;
+    max-width: none;
+}
+  }
+  .questions-container {
+  
+    transform: translateY(-10vh);
+  }
+
+  .section_img {
+    padding: 50vw 10vw 15vw;
+ 
+}
   }
