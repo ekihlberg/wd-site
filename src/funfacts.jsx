@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 function Funfacts() {
     return (
         
-    <div className='section'>
+    <div className='section section_funfact'>
         <div className='section_text'>
             <h3>om oss</h3>
             <h2>Hur mycket kan ni om brudparet? </h2>
