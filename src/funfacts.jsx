@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import QuestionBox from './QuestionBox';
+
 const questionsAndAnswers = [
     { question: "Hur träffades vi?", answer: "2018 matchade vi på Datingappen Vissla, efter att den strulat ett antal gånger frågade Emma äntligen ut Tobbe i Juli 2019 " },
     { question: "Var var vår första date?", answer: "Vår första date att vi skulle ta en öl på Bar himmel på göta platsen, en öl blev till ett gäng och vi satt kavr till stängning" },
     { question: "Vårt största gemensamm intresse", answer: "vi har båda ett sorrt intresse för Mat, Äta mat, laga mat och Bjuda folk på mat" },
     { question: "Hur länge har vi varit tilsammans?", answer: "Vi räknar att vi blev tillsamns den 17 November så vid bröllopet har vi varit tilsammans nästan 5 år" },
     { question: "Vår favoriträtt att laga tillsammans?", answer: "En rätt vi gärna bjuder på är Bao buns med långbakad fläsksida " },
-    { question: "Vår favoriträtt att laga tillsammans?", answer: "En rätt vi gärna bjuder på är Bao buns med långbakad fläsksida " },
+     { question: "Vår favoriträtt att laga tillsammans?", answer: "En rätt vi gärna bjuder på är Bao buns med långbakad fläsksida " },
 ];
 
   

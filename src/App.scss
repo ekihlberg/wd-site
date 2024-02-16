@@ -40,9 +40,20 @@ h1, h2 {
   text-align: center;
 }
 
-h3, h4, p {
+h3, h4, p, a{
   font-family: $raleway-font;
   font-weight: 200;
+}
+a.button {
+  padding: 15px 20px;
+  background-color: #2B3835;
+  color: #fff;
+  border: none;
+  border-radius: 49px;
+  width: 200px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
 }
 
 .top-header-subtext {
@@ -185,6 +196,7 @@ h3, h4, p {
       position: relative;
       font-size: 0.8rem;
       display: inline-block;
+      border: 1px solid #fff;
 
       &:hover {
         background-color: $secondary-color;
@@ -343,6 +355,7 @@ h3, h4, p {
 .accordion {
   .accordion-item {
     border-bottom: 1px solid $primary-color;
+    color: #000;
 
     button[aria-expanded='true'] {
       border-bottom: 1px solid $primary-color;
@@ -362,6 +375,7 @@ h3, h4, p {
     background: none;
     outline: none;
     padding-right: 22px;
+    color: $primary-color;
 
     &:hover, &:focus {
       cursor: pointer;

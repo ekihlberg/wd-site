@@ -55,7 +55,7 @@ function WeddingRSVPForm() {
       <h3>OSA</h3>
       <h2>Kommer du?</h2>
       <p>Oavsett om ni kommer eller inte vill vi grärna att ni fyller i formuläret nedan.</p>
-      <form onSubmit={handleSubmit} className="wedding-rsvp-form" netlify>
+      <form onSubmit={handleSubmit} className="wedding-rsvp-form">
         <label>
           För- och efternamn:
           <input
