@@ -18,22 +18,19 @@ function WeddingRSVPForm() {
     setIsToggled(!isToggled);
   };
 
-  // No need for handleSubmit function
 
   return (
     <div className='rsvp_section'>
       <h3>OSA</h3>
       <h2>Kommer du?</h2>
       <p>Oavsett om ni kommer eller inte vill vi grärna att ni fyller i formuläret nedan.</p>
-      <form className="wedding-rsvp-form" name="weddingRSVP" method="POST" data-netlify="true" netlify>
+      <form className="wedding-rsvp-form" name="weddingRSVP" method="POST" data-netlify="true" onSubmit="Submit">
         {/* Netlify requires a hidden input for form-name to correctly process submissions from React/JS */}
         <input type="hidden" name="form-name" value="weddingRSVP" />
         <label>
           För- och efternamn:
           <input
             type="text"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
             name='name'
             placeholder="ex. Emma Kihlberg"
           />
