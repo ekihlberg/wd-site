@@ -18,6 +18,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Mapfunc />
     <Faq />
     <Vigsel />
-    <WeddingRSVPForm></WeddingRSVPForm>
+    {/* <WeddingRSVPForm></WeddingRSVPForm> */}
   </React.StrictMode>,
 )

@@ -1,101 +1,154 @@
 import React, { useState } from 'react';
-import ToggleInput from './ToggleInput.jsx';
-import Xosa from './Xosa.jsx';
 
 function WeddingRSVPForm() {
-  const [fullName, setFullName] = useState('');
-  const [attendance, setAttendance] = useState('');
-  const [isToggled, setIsToggled] = useState(false);
-  const [extraInputValue, setExtraInputValue] = useState('');
-  const [email, setEmail] = useState(''); // Added state for email
-  const [showFields, setShowFields] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    attendance: '',
+    specialDiet: '',
+    showSpecialDiet: false, // Kontrollerar visningen av specialkost-input
+    partnerName: '',
+    partnerEmail: '',
+    partnerSpecialDiet: '',
+    showPartnerSection: false, // Kontrollerar visningen av partner-OSA-sektionen
+  });
 
-  const handleToggleClick = () => {
-    setShowFields(!showFields);
+  // Hantera ändringar i formuläret
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    const inputValue = type === 'checkbox' ? checked : value;
+    setFormData({ ...formData, [name]: inputValue });
   };
 
-  const handleToggle = () => {
-    setIsToggled(!isToggled);
+  // Hantera formulärinskickning
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Logga inskickad data eller skicka till en server
+    console.log('Form data submitted:', formData);
   };
-
 
   return (
     <div className='rsvp_section'>
       <h3>OSA</h3>
       <h2>Kommer du?</h2>
-      <p>Oavsett om ni kommer eller inte vill vi grärna att ni fyller i formuläret nedan.</p>
-      <form className="wedding-rsvp-form" name="weddingRSVP" method="POST" data-netlify="true" onSubmit="Submit">
-        {/* Netlify requires a hidden input for form-name to correctly process submissions from React/JS */}
+      <p>Oavsett om ni kommer eller inte vill vi gärna att ni fyller i formuläret nedan.</p>
+      <form 
+        className="wedding-rsvp-form" 
+        name="weddingRSVP" 
+        method="POST" 
+        data-netlify="true" 
+        onSubmit={handleSubmit}
+      >
         <input type="hidden" name="form-name" value="weddingRSVP" />
+
         <label>
           För- och efternamn:
           <input
             type="text"
-            name='name'
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
             placeholder="ex. Emma Kihlberg"
           />
         </label>
 
-        {/* Attendance Radio Buttons */}
-        <div className='osa_toggle'>
-          <input
-            type="radio"
-            value="attending"
-            id='can'
-            checked={attendance === 'attending'}
-            onChange={() => setAttendance('attending')}
-          />
-          <label htmlFor='can'>
-            Jag kommer gärna på ert bröllop
-          </label>
-          <input
-            type="radio"
-            id='cant'
-            value="not-attending"
-            checked={attendance === 'not-attending'}
-            onChange={() => setAttendance('not-attending')}
-          />
-          <label htmlFor="cant">
-            Jag kan tyvärr inte komma och fira
-          </label>
-        </div>
-
         <label>
-          <input
-            type="checkbox"
-            checked={isToggled}
-            onChange={handleToggle}
-          />
-          Specialkost
-        </label>
-
-        {isToggled && (
-          <div className='food_field'>
-            <label>
-              Specialkost:
-              <input
-                type="text"
-                name='Specialkost2'
-                value={extraInputValue}
-                onChange={(e) => setExtraInputValue(e.target.value)}
-                placeholder="ex. Jordnötter"
-              />
-            </label>
-          </div>
-        )}
-
-        <label>
-          E-postadress
+          E-postadress:
           <input
             type="email"
-            name='email'
-            value={email} // Use state for value
-            onChange={(e) => setEmail(e.target.value)} // Update state on change
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
             placeholder="ex. exempel@gmail.com"
           />
         </label>
 
-        <Xosa handleToggleClick={handleToggleClick} showFields={showFields} />
+        <div>
+          <input
+            type="radio"
+            id="attending"
+            name="attendance"
+            value="attending"
+            checked={formData.attendance === 'attending'}
+            onChange={handleChange}
+          />
+          <label htmlFor="attending">Jag kommer</label>
+
+          <input
+            type="radio"
+            id="not-attending"
+            name="attendance"
+            value="not-attending"
+            checked={formData.attendance === 'not-attending'}
+            onChange={handleChange}
+          />
+          <label htmlFor="not-attending">Jag kan inte komma</label>
+        </div>
+
+        <label>
+          Specialkost:
+          <input
+            type="checkbox"
+            name="showSpecialDiet"
+            checked={formData.showSpecialDiet}
+            onChange={handleChange}
+          />
+        </label>
+        {formData.showSpecialDiet && (
+          <label>
+            Ange specialkost:
+            <input
+              type="text"
+              name="specialDiet"
+              value={formData.specialDiet}
+              onChange={handleChange}
+              placeholder="ex. Glutenfri"
+            />
+          </label>
+        )}
+
+        <div style={{ marginTop: '20px' }}>
+          <a href="#!" onClick={() => setFormData({ ...formData, showPartnerSection: !formData.showPartnerSection })}>
+            {formData.showPartnerSection ? '- Dölj OSA för din partner' : '+ Osa för din partner'}
+          </a>
+        </div>
+
+        {formData.showPartnerSection && (
+          <div>
+            <label>
+              Partner För- och efternamn:
+              <input
+                type="text"
+                name="partnerName"
+                value={formData.partnerName}
+                onChange={handleChange}
+                placeholder="ex. Tobias Eherendahl"
+              />
+            </label>
+
+            <label>
+              Partner E-postadress:
+              <input
+                type="email"
+                name="partnerEmail"
+                value={formData.partnerEmail}
+                onChange={handleChange}
+                placeholder="ex. exempel@gmail.com"
+              />
+            </label>
+
+            <label>
+              Partner Specialkost:
+              <input
+                type="text"
+                name="partnerSpecialDiet"
+                value={formData.partnerSpecialDiet}
+                onChange={handleChange}
+                placeholder="Ange eventuella matrestriktioner"
+              />
+            </label>
+          </div>
+        )}
 
         <div className='button_wrapper'>
           <button type="submit">Skicka</button>

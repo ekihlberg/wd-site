@@ -1,16 +1,129 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="src/assets/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Raleway:wght@100;200&display=swap');
-      </style>
-    <title>Emma och Tobias</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="src/assets/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Raleway:wght@100;200&display=swap');
+  </style>
+  <title>Emma och Tobias</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <div class='rsvp_section'>
+    <h3>OSA</h3>
+    <h2>Kommer du?</h2>
+    <p>Oavsett om ni kommer eller inte vill vi gärna att ni fyller i formuläret nedan.</p>
+  <form class="wedding-rsvp-form" name="weddingRSVP" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="weddingRSVP" />
+
+    <label>
+      För- och efternamn:
+      <input type="text" name="name" placeholder="ex. Emma Kihlberg" required>
+    </label>
+
+    <label>
+      E-postadress:
+      <input type="email" name="email" placeholder="ex. exempel@gmail.com" required>
+    </label>
+
+    <div class="osa_toggle">
+      <input type="radio" id="attending" name="attendance" value="attending" required>
+      <label for="attending">Jag kommer gärna på ert bröllop</label>
+
+      <input type="radio" id="not-attending" name="attendance" value="not-attending" required>
+      <label for="not-attending">Jag kan tyvärr inte komma och fira</label>
+    </div>
+
+    <label>
+      <input type="checkbox" name="showSpecialDiet">
+      Specialkost
+    </label>
+
+    <div id="specialDietSection" class="food_field" style="display: none;">
+      <label>
+        Specialkost:
+        <input type="text" name="specialDiet" placeholder="ex. Glutenfri">
+      </label>
+    </div>
+    <div>
+      <div style="margin-top: 20px;" >
+        <a href="#!" class="toggle-partner-link" onclick="togglePartnerSection()">+ Osa för din respektive</a>
+      </div>
+
+      <div id="partnerSection" class="section_partner" style="display: none;">
+        <label>
+          För- och efternamn:
+          <input type="text" name="partnerName" placeholder="ex. Tobias Eherendahl">
+        </label>
+
+        <label>
+          E-postadress:
+          <input type="email" name="partnerEmail" placeholder="ex. exempel@gmail.com">
+        </label>
+      
+        
+          <label>
+            <input type="checkbox" name="showPartnerSpecialDiet"> Partner's Specialkost
+          </label>
+        
+          <div id="partnerSpecialDietSection" style="display: none;">
+            <label>
+              Specialkost:
+              <input type="text" name="partnerSpecialDiet" placeholder="Ange eventuella matrestriktioner">
+            </label>
+          </div>
+        </div>
+        
+
+       
+      </div>
+    
+    <div class="button_wrapper">
+      <button type="submit">Skicka</button>
+    </div>
+  </form>
+  </div>
+  </div>
+
+  <script>
+    document.querySelector('input[name="showSpecialDiet"]').addEventListener('change', function() {
+  var specialDietSection = document.getElementById("specialDietSection");
+  specialDietSection.style.display = this.checked ? "block" : "none";
+});
+
+// New code to handle the partner's special diet checkbox
+document.querySelector('input[name="showPartnerSpecialDiet"]').addEventListener('change', function() {
+  var partnerSpecialDietSection = document.getElementById("partnerSpecialDietSection");
+  partnerSpecialDietSection.style.display = this.checked ? "block" : "none";
+});
+
+function togglePartnerSection() {
+  var partnerSection = document.getElementById("partnerSection");
+  var linkText = document.querySelector(".toggle-partner-link");
+  var partnerDiv = document.getElementById("partnerSection").parentElement;
+
+  if (partnerSection.style.display === "none") {
+    partnerSection.style.display = "block";
+    linkText.textContent = "X";
+    linkText.classList.add("xosa_rem");
+    partnerDiv.classList.add("xosa_box");
+  } else {
+    partnerSection.style.display = "none";
+    linkText.textContent = "+ Osa för din respektive";
+    linkText.classList.remove("xosa_rem");
+    partnerDiv.classList.remove("xosa_box");
+  }
+}
+
+    
+  </script>
+  
+
+</body>
+
 </html>

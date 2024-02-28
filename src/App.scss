@@ -140,7 +140,7 @@ a.button {
       color: $text-color;
       background-color: $primary-color;
       position: relative;
-      margin: 10vw 0 15vw;
+      margin: 15vw 0 15vw;
       .top_wave {
         position: absolute;
         transform: translateY(-99%);
@@ -275,6 +275,12 @@ a.button {
   color: $text-color;
   border-radius: 5px;
 }
+.toggle-partner-link{
+  display: block;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+}
 
 .xosa_add {
   display: block;
@@ -317,6 +323,7 @@ a.button {
   align-items: center;
   justify-content: center;
 }
+
 
 .rsvp_section {
   display: flex;

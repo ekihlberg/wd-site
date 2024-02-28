@@ -1,5 +1,9 @@
 // QuestionBox.scss
 $raleway-font: 'Raleway', sans-serif;
+*{
+  outline: none;
+    border: none;
+}
 
 h3, h4, p, a, div{
   font-family: $raleway-font;
