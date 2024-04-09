@@ -3,11 +3,11 @@ import QuestionBox from './QuestionBox.jsx';
 
 const questionsAndAnswers = [
     { question: "Hur träffades vi?", answer: "2018 matchade vi på Datingappen Vissla, efter att den strulat ett antal gånger frågade Emma äntligen ut Tobbe i Juli 2019 " },
-    { question: "Var var vår första date?", answer: "Vår första date att vi skulle ta en öl på Bar himmel på göta platsen, en öl blev till ett gäng och vi satt kavr till stängning" },
-    { question: "Vårt största gemensamm intresse", answer: "Vi har båda ett stort intresse för Mat, Äta mat, laga mat och Bjuda folk på mat" },
-    { question: "Hur länge har vi varit tilsammans?", answer: "Vi räknar att vi blev tillsamns den 17 November så vid bröllopet har vi varit tilsammans nästan 5 år" },
+    { question: "Vart var vår första date?", answer: "Vår första date att vi skulle ta en öl på Bar himmel på göta platsen, en öl blev till ett gäng och vi satt kvar till stängning" },
+    { question: "Vårt största gemensamma intresse", answer: "Vi har båda ett stort intresse för mat, äta mat, laga mat och bjuda folk på mat" },
+    { question: "Hur länge har vi varit tilsammans?", answer: "Vi räknar att vi blev tillsamns den 17 November så vid bröllopet har vi varit tilsammans i nästan 5 år" },
     { question: "Vår favoriträtt att laga tillsammans?", answer: "En rätt vi gärna bjuder på är Bao buns med långbakad fläsksida " },
-    { question: "Vår favoriträtt att laga tillsammans?", answer: "En rätt vi gärna bjuder på är Bao buns med långbakad fläsksida " },
+    { question: "Vår första resa tillsammans?", answer: "Vår första resa var en roadtrip genom Skåne" },
 ];
 
   

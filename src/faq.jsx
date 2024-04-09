@@ -6,7 +6,7 @@ function Faq() {
     const faqData = [
         {
             question: 'Får våra barn vara med? ',
-            answer: ' Vi älskar verkligen barn, men för denna speciella tillställning har vi beslutat att göra den enbart för vuxna. Vi hoppas att detta arrangemang passar och ser fram emot att ha en underbar dag tillsammans!'
+            answer: 'Vi älskar verkligen barn, men för denna speciella tillställning har vi beslutat att göra den enbart för vuxna. Vi hoppas att detta arrangemang passar och ser fram emot att ha en underbar dag tillsammans!'
         },
         {
             question: 'Vad önskas i bröllopspresent?',
@@ -14,25 +14,24 @@ function Faq() {
         },
         {
             question: 'Vad ska jag ha på mig?',
-            answer: "Klädkoden är 'Kavaj'. Vi föreslår en elegant men bekväm outfit som passar för en glädjefylld och stämningsfull dag. Vitt och svart är reserverat av brudparet"
+            answer: "Klädkoden är 'Kavaj'. Vi föreslår en elegant men bekväm outfit som passar för en glädjefylld och stämningsfull dag. Vitt är reserverat av bruden"
         },
         {
             question: 'Jag vill hålla tal eller ge en skål på bröllopet hur gör jag?',
-            answer: 'The Earth has a mass of approximately 5.97 x 10^24 kilograms, but weight is a measure of gravity...'
+            answer: 'Vi älskar tal & vill du hålla ett tal meddela toastmasters genom att skicka ett mail till ...'
         },
         {
             question: 'Hur länge håller det på?',
-            answer: "Festligheterna börjar kl. 15:00 och vi räknar med att avsluta runt midnatt. Vi hoppas att du kan stanna och fira med oss under hela evenemanget!"
+            answer: "Festligheterna börjar kl. 15:00 och vi räknar med att avsluta runt midnatt. Vi hoppas att du kan stanna och fira med oss under hela evenemanget!",
         },
         {
             question: 'Hur tar jag mig till lokalen?',
-            answer: "Lokalen är belägen på [adress]. Det finns gott om parkeringsplatser för de som kör. För de som föredrar kollektivtrafik, ligger närmaste busshållplats endast fem minuters promenad bort."
+            answer: "Lokalen är belägen på Fabrikstråket 36 & 40 i Jonsered. Det finns gott om parkeringsplatser för de som kör. För de som föredrar kollektivtrafik, ligger närmaste busshållplats (Jonsered Jons Väg) eller tågstation (Jonsered) endast fem minuters promenad bort."
         },
         {
             question: 'Kan jag bo i närheten av lokalen?',
-            answer: "Ja, det finns flera hotell i närheten. Vi rekommenderar [Hotellnamn] som ligger bara en kort promenad från lokalen. Vi har även ordnat en specialrabatt för våra gäster, så nämn gärna vårt bröllop vid bokning."
+            answer: "Ja, det finns flera hotell i närheten. Vi rekommenderar Gibson Hotell som ligger bara en kort promenad från lokalen."
         },
-        ,
         {
             question: 'Min respekive står inte med på inbjudan, kan jag osa för hen ändå? ',
             answer: "Vi är så glada att ni vill komma! Vi har dock begränsat antal platser och har beslutat att endast inkludera de som explicit nämns på inbjudan. Detta var ett svårt beslut, men nödvändigt pga plats- och budgetskäl. Vi hoppas på din förståelse och ser fram emot att fira med dig."

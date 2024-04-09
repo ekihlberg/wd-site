@@ -37,6 +37,11 @@ h3, h4, p, a, div{
       opacity: 0;
       transition: opacity 0.3s ease, max-height 0.3s ease;
     }
+    .question {
+      max-height: 0;
+      opacity: 1;
+      transition: opacity 0.3s ease, max-height 0.3s ease;
+    }
     &:hover .question {
         opacity: 0;
         display: none;
@@ -65,7 +70,6 @@ h3, h4, p, a, div{
     justify-content: space-evenly;
     position: relative;
     margin-top: 50vh;
-    height: 50vh;
     margin-bottom: 10vh;
 
     .section_text{
