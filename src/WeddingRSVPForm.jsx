@@ -86,7 +86,7 @@ function WeddingRSVPForm() {
         </div>
 
         <label>
-          Specialkost:
+          Specialkost
           <input
             type="checkbox"
             name="showSpecialDiet"
@@ -96,7 +96,7 @@ function WeddingRSVPForm() {
         </label>
         {formData.showSpecialDiet && (
           <label>
-            Ange specialkost:
+            Specialkost:
             <input
               type="text"
               name="specialDiet"
@@ -116,7 +116,7 @@ function WeddingRSVPForm() {
         {formData.showPartnerSection && (
           <div>
             <label>
-              Partner För- och efternamn:
+         För- och efternamn:
               <input
                 type="text"
                 name="partnerName"
@@ -127,7 +127,7 @@ function WeddingRSVPForm() {
             </label>
 
             <label>
-              Partner E-postadress:
+             E-postadress:
               <input
                 type="email"
                 name="partnerEmail"

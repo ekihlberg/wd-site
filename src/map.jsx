@@ -9,7 +9,7 @@ import {
 
 
 function Mapfunc() {
-    const position = { lat: 57.7470384, lng: 12.0329031 };
+    const position = { lat: 57.748053, lng: 12.175684 };
   const [open, setOpen] = useState(false);
   
 return (
