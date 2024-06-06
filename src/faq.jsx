@@ -18,7 +18,7 @@ function Faq() {
         },
         {
             question: 'Jag vill hålla tal eller ge en skål på bröllopet hur gör jag?',
-            answer: 'Vi älskar tal & vill du hålla ett tal meddela toastmasters genom att skicka ett mail till ...'
+            answer: 'Vi älskar tal & vill du hålla ett tal meddela toastmasters genom att skicka ett mail till toastmaster@ehrendahl.se'
         },
         {
             question: 'Hur länge håller det på?',
