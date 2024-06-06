@@ -19,7 +19,7 @@ return (
             <div className="section_text direction_text">
                 <h3>Vägbeskrivning</h3>
                 <h2>Hitta hit</h2>
-                <p>Lokalen för vigsel & fest är Fabrikstråket i Jonsered. Den ligger på adress Fabrikstråket 36 & 40 i Jonsered. Det går att ta sig dit antingen med bil/taxi/uber, pendeltåg(Jonsered station) eller buss(Jonsered Jons väg).
+                <p>Lokalen för vigsel & fest är Fabrikstråket i Jonsered. Den ligger på adress Fabrikstråket 36 & 40 i Jonsered. Det går att ta sig dit antingen med bil/taxi/uber, pendeltåg (Jonsered station) eller buss (Jonsered Jons väg).
                     <br />  <br />
                     Klicka på knappen för att komma vidare till karta  <br /></p>
                 <a className="button" href="https://www.google.com/maps/dir//Fabriksstr%C3%A5ket+Jonsered,+Fabriksstr%C3%A5ket+36,+433+76+Jonsered/@57.7470384,12.0329031,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x464ff78d3f6897c3:0xaffee2e763751daa!2m2!1d12.1756818!2d57.7480542?entry=ttu" target='_blank'>Vägbeskrivning</a>

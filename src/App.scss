@@ -50,6 +50,7 @@ a.button {
   padding: 15px 20px;
   background-color: #2B3835;
   color: #fff;
+  display: block;
   border: none;
   border-radius: 49px;
   width: 200px;
@@ -157,17 +158,40 @@ a.button {
   }
   &_wrapper{
     display: flex;
-    width: 100%;
+    width: 90%;
     justify-content: space-evenly;
+  }
+  &_text_wrapper{
+    max-width: 560px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p{
+      padding-bottom: 20px;
+    }
   }
   &_img{
     display: flex;
-    padding: 30vw 10vw 5vw;
+    padding: 30vw 0vw 5vw;
     flex-direction: row;
     max-width: 1000px;
     img{
       width: 50%;
       padding: 2vw;
+    }
+  }
+  &_img_toast{
+    display: flex;
+    padding: 5vw 0vw 5vw;
+    flex-direction: row;
+    max-width: 1000px;
+    img{
+      width: 50%;
+      padding: 0vw;
+    }
+    .toast1{
+      padding-right: 2vw;
     }
   }
 

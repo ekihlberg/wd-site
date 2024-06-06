@@ -38,7 +38,7 @@ function App() {
       </div>
       <div className='section_wrapper'>
         <div className='section section_img section_img__light'>
-          <img src={eotEdinburgh} alt="Edinburgh"  ref={imge1} style={{ transform: `translateY(${img1}px)` }} />
+          <img src={eotEdinburgh}  alt="Edinburgh"  ref={imge1} style={{ transform: `translateY(${img1}px)` }} />
           <img src={eotstc} alt="Star Clipper" ref={imge2} style={{ transform: `translateY(${img2}px)` }} />
         </div>
       </div>
