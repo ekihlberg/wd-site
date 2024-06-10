@@ -33,6 +33,8 @@ return (
                   center={position} 
                   mapId="ec7fddfc9fde637d"
                   options={{
+                    zoomControl: false,
+                    attributionControl: false,
                     streetViewControl: false, // This disables Street View
                     mapTypeControl: false,
                     fullscreenControl: false, // This disables the map type control (e.g., Satellite View)
