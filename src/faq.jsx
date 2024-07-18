@@ -22,7 +22,7 @@ function Faq() {
         },
         {
             question: 'Hur länge håller det på?',
-            answer: "Festligheterna börjar kl. 15:00 och vi räknar med att avsluta runt midnatt. Vi hoppas att du kan stanna och fira med oss under hela evenemanget!",
+            answer: "Festligheterna börjar kl. 14:00 och vi räknar med att avsluta in på småtimmarna. Vi hoppas att du kan stanna och fira med oss under hela evenemanget!",
         },
         {
             question: 'Hur tar jag mig till lokalen?',
